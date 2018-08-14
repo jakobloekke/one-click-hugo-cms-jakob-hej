@@ -1,7 +1,19 @@
 {{ define "main" }}
 
+
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
 
+<form name="contact" netlify>
+    <p>
+        <label>Name <input type="text" name="name" /></label>
+    </p>
+    <p>
+        <label>Email <input type="email" name="email" /></label>
+    </p>
+    <p>
+        <button type="submit">Send</button>
+    </p>
+</form>
 {{ partial "short-text" .Params.blurb}}
 
 {{ partial "2-up" .Params }}
